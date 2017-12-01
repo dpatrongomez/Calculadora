@@ -14,7 +14,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     EditText numero1, numero2;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
         Button Dividir = findViewById(R.id.dividir);
         final TextView Resultado = findViewById(R.id.resultado);
 
-
         Sumar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,11 +36,9 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (numero2.getText().toString().isEmpty()) {
                     } else {
-                        //int aux1 = Integer.valueOf(numero1.getText().toString());
-                        //int aux2 = Integer.valueOf(numero2.getText().toString());      NO SE PUEDE DECIMALES
-                        double aux1 = Double.parseDouble(numero1.getText().toString());
-                        double aux2 = Double.parseDouble(numero2.getText().toString());
-                        double resultado = aux1 + aux2;
+                        float aux1 = Float.parseFloat(numero1.getText().toString());
+                        float aux2 = Float.parseFloat(numero2.getText().toString());
+                        float resultado = aux1 + aux2;
 
                         Resultado.setText("" + resultado);
                     }
@@ -59,9 +55,9 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (numero2.getText().toString().isEmpty()) {
                     } else {
-                        double aux1 = Double.parseDouble(numero1.getText().toString());
-                        double aux2 = Double.parseDouble(numero2.getText().toString());
-                        double resultado = aux1 - aux2;
+                        float aux1 = Float.parseFloat(numero1.getText().toString());
+                        float aux2 = Float.parseFloat(numero2.getText().toString());
+                        float resultado = aux1 - aux2;
 
                         Resultado.setText("" + resultado);
                     }
@@ -77,9 +73,9 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (numero2.getText().toString().isEmpty()) {
                     } else {
-                        double aux1 = Double.parseDouble(numero1.getText().toString());
-                        double aux2 = Double.parseDouble(numero2.getText().toString());
-                        double resultado = aux1 * aux2;
+                        float aux1 = Float.parseFloat(numero1.getText().toString());
+                        float aux2 = Float.parseFloat(numero2.getText().toString());
+                        float resultado = aux1 * aux2;
 
                         Resultado.setText("" + resultado);
                     }
@@ -97,13 +93,13 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     if (numero2.getText().toString().isEmpty()) {
                     } else {
-                        double aux1 = Double.parseDouble(numero1.getText().toString());
-                        double aux2 = Double.parseDouble(numero2.getText().toString());
+                        float aux1 = Float.parseFloat(numero1.getText().toString());
+                        float aux2 = Float.parseFloat(numero2.getText().toString());
 
                         if (aux2 == 0) {
                             Resultado.setText("ERROR");
                         } else {
-                            double resultado = aux1 / aux2;
+                            float resultado = aux1 / aux2;
                             Resultado.setText("" + resultado);
                         }
                     }
