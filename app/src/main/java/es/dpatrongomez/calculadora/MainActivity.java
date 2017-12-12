@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         numero2 = findViewById(R.id.num2);
 
 
-
         Button Sumar = findViewById(R.id.sumar);
         Button Resta = findViewById(R.id.restar);
         Button Multiplicar = findViewById(R.id.multiplicar);
@@ -34,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
         Sumar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                InputMethodManager teclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                if (teclado != null) {
+                    teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+                }
 
                 if (numero1.getText().toString().isEmpty()) {
                 } else {
@@ -46,18 +49,18 @@ public class MainActivity extends AppCompatActivity {
                         Resultado.setText("" + resultado);
                     }
                 }
-                InputMethodManager teclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                if (teclado != null) {
-                    teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-                }
             }
         });
         Resta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                InputMethodManager teclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                if (teclado != null) {
+                    teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+                }
 
                 if (numero1.getText().toString().isEmpty()) {
-                } else {
+                } else
                     if (numero2.getText().toString().isEmpty()) {
                     } else {
                         float aux1 = Float.parseFloat(numero1.getText().toString());
@@ -66,18 +69,19 @@ public class MainActivity extends AppCompatActivity {
 
                         Resultado.setText("" + resultado);
                     }
-                }
-                InputMethodManager teclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                if (teclado != null) {
-                    teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-                }
+
             }
         });
         Multiplicar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                InputMethodManager teclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                if (teclado != null) {
+                    teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+                }
+
                 if (numero1.getText().toString().isEmpty()) {
-                } else {
+                } else
                     if (numero2.getText().toString().isEmpty()) {
                     } else {
                         float aux1 = Float.parseFloat(numero1.getText().toString());
@@ -86,20 +90,21 @@ public class MainActivity extends AppCompatActivity {
 
                         Resultado.setText("" + resultado);
                     }
-                }
-                InputMethodManager teclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                if (teclado != null) {
-                    teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-                }
+
+
             }
         });
         Dividir.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
             @Override
             public void onClick(View v) {
+                InputMethodManager teclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                if (teclado != null) {
+                    teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+                }
 
                 if (numero1.getText().toString().isEmpty()) {
-                } else {
+                } else
                     if (numero2.getText().toString().isEmpty()) {
                     } else {
                         float aux1 = Float.parseFloat(numero1.getText().toString());
@@ -112,11 +117,7 @@ public class MainActivity extends AppCompatActivity {
                             Resultado.setText("" + resultado);
                         }
                     }
-                    InputMethodManager teclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                    if (teclado != null) {
-                        teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-                    }
-                }
+
             }
 
         });
