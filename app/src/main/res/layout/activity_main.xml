@@ -14,7 +14,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="Número 1"
+        android:hint="@string/n_mero_1"
         android:inputType="number|numberDecimal"
         android:numeric="signed|decimal"
         android:selectAllOnFocus="false"
@@ -31,7 +31,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Número 2"
+        android:hint="@string/n_mero_2"
         android:inputType="number|numberDecimal"
         android:numeric="integer|signed|decimal"
         android:singleLine="true"
@@ -46,7 +46,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="148dp"
-        android:text="Sumar"
+        android:text="@string/sumar"
         app:layout_constraintEnd_toStartOf="@+id/restar"
         app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
         android:layout_marginTop="148dp"
-        android:text="Restar"
+        android:text="@string/restar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -69,7 +69,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="24dp"
-        android:text="Multiplicar"
+        android:text="@string/multiplicar"
         app:layout_constraintEnd_toStartOf="@+id/dividir"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sumar" />
@@ -80,7 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
         android:layout_marginTop="24dp"
-        android:text="Dividir"
+        android:text="@string/dividir"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/restar" />
 
@@ -94,7 +94,7 @@
         android:layout_marginTop="92dp"
         android:ems="10"
         android:shape="rectangle"
-        android:text="Resultado"
+        android:text="@string/resultado"
         android:textAppearance="?android:attr/textAppearanceLarge"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
