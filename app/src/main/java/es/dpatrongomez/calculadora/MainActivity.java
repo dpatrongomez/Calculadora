@@ -34,9 +34,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 InputMethodManager teclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                if (teclado != null) {
-                    teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-                }
+                teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
 
                 if (numero1.getText().toString().isEmpty()) {
                 } else {
@@ -55,9 +53,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 InputMethodManager teclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                if (teclado != null) {
-                    teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-                }
+                teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
 
                 if (numero1.getText().toString().isEmpty()) {
                 } else
@@ -76,9 +72,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 InputMethodManager teclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                if (teclado != null) {
-                    teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-                }
+                teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
 
                 if (numero1.getText().toString().isEmpty()) {
                 } else
@@ -99,9 +93,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 InputMethodManager teclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                if (teclado != null) {
-                    teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-                }
+                teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
 
                 if (numero1.getText().toString().isEmpty()) {
                 } else
