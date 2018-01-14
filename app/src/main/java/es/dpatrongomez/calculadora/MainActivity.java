@@ -14,7 +14,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     EditText numero1, numero2;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
 
         numero1 = findViewById(R.id.num1);
         numero2 = findViewById(R.id.num2);
-
 
         Button Sumar = findViewById(R.id.sumar);
         Button Resta = findViewById(R.id.restar);
@@ -36,16 +34,12 @@ public class MainActivity extends AppCompatActivity {
                 InputMethodManager teclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
                 teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
 
-                if (numero1.getText().toString().isEmpty()) {
-                } else {
-                    if (numero2.getText().toString().isEmpty()) {
-                    } else {
+                if (!numero1.getText().toString().isEmpty() && !numero2.getText().toString().isEmpty() ) {
                         float aux1 = Float.parseFloat(numero1.getText().toString());
                         float aux2 = Float.parseFloat(numero2.getText().toString());
                         float resultado = aux1 + aux2;
 
                         Resultado.setText("" + resultado);
-                    }
                 }
             }
         });
@@ -55,17 +49,13 @@ public class MainActivity extends AppCompatActivity {
                 InputMethodManager teclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
                 teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
 
-                if (numero1.getText().toString().isEmpty()) {
-                } else
-                    if (numero2.getText().toString().isEmpty()) {
-                    } else {
+                if (!numero1.getText().toString().isEmpty() && !numero2.getText().toString().isEmpty() ) {
                         float aux1 = Float.parseFloat(numero1.getText().toString());
                         float aux2 = Float.parseFloat(numero2.getText().toString());
                         float resultado = aux1 - aux2;
 
                         Resultado.setText("" + resultado);
-                    }
-
+                }
             }
         });
         Multiplicar.setOnClickListener(new View.OnClickListener() {
@@ -74,18 +64,13 @@ public class MainActivity extends AppCompatActivity {
                 InputMethodManager teclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
                 teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
 
-                if (numero1.getText().toString().isEmpty()) {
-                } else
-                    if (numero2.getText().toString().isEmpty()) {
-                    } else {
+                if (!numero1.getText().toString().isEmpty() && !numero2.getText().toString().isEmpty() ) {
                         float aux1 = Float.parseFloat(numero1.getText().toString());
                         float aux2 = Float.parseFloat(numero2.getText().toString());
                         float resultado = aux1 * aux2;
 
                         Resultado.setText("" + resultado);
-                    }
-
-
+                }
             }
         });
         Dividir.setOnClickListener(new View.OnClickListener() {
@@ -95,10 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 InputMethodManager teclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
                 teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
 
-                if (numero1.getText().toString().isEmpty()) {
-                } else
-                    if (numero2.getText().toString().isEmpty()) {
-                    } else {
+                if (!numero1.getText().toString().isEmpty() && !numero2.getText().toString().isEmpty() ) {
                         float aux1 = Float.parseFloat(numero1.getText().toString());
                         float aux2 = Float.parseFloat(numero2.getText().toString());
 
@@ -108,10 +90,8 @@ public class MainActivity extends AppCompatActivity {
                             float resultado = aux1 / aux2;
                             Resultado.setText("" + resultado);
                         }
-                    }
-
+                }
             }
-
         });
 
     }
