@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="resultado">Answer</string>
+    <string name="dividir">Divide</string>
+    <string name="multiplicar">Multiply</string>
+    <string name="restar">Subtract</string>
+    <string name="sumar">Add</string>
+    <string name="n_mero_2">Number 2</string>
+    <string name="n_mero_1">Number 1</string>
+</resources>
