@@ -16,24 +16,23 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         numero1 = findViewById(R.id.num1);
         numero2 = findViewById(R.id.num2);
-
         Button Sumar = findViewById(R.id.sumar);
         Button Resta = findViewById(R.id.restar);
         Button Multiplicar = findViewById(R.id.multiplicar);
         Button Dividir = findViewById(R.id.dividir);
         final TextView Resultado = findViewById(R.id.resultado);
+        final InputMethodManager teclado = (InputMethodManager) getSystemService(MainActivity.INPUT_METHOD_SERVICE);
 
         Sumar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                InputMethodManager teclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-
+                teclado.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
                 if (!numero1.getText().toString().isEmpty() && !numero2.getText().toString().isEmpty() ) {
                         float aux1 = Float.parseFloat(numero1.getText().toString());
                         float aux2 = Float.parseFloat(numero2.getText().toString());
@@ -46,9 +45,7 @@ public class MainActivity extends AppCompatActivity {
         Resta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                InputMethodManager teclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-
+                teclado.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
                 if (!numero1.getText().toString().isEmpty() && !numero2.getText().toString().isEmpty() ) {
                         float aux1 = Float.parseFloat(numero1.getText().toString());
                         float aux2 = Float.parseFloat(numero2.getText().toString());
@@ -61,9 +58,7 @@ public class MainActivity extends AppCompatActivity {
         Multiplicar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                InputMethodManager teclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-
+                teclado.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
                 if (!numero1.getText().toString().isEmpty() && !numero2.getText().toString().isEmpty() ) {
                         float aux1 = Float.parseFloat(numero1.getText().toString());
                         float aux2 = Float.parseFloat(numero2.getText().toString());
@@ -77,9 +72,7 @@ public class MainActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
             @Override
             public void onClick(View v) {
-                InputMethodManager teclado = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                teclado.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-
+                teclado.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
                 if (!numero1.getText().toString().isEmpty() && !numero2.getText().toString().isEmpty() ) {
                         float aux1 = Float.parseFloat(numero1.getText().toString());
                         float aux2 = Float.parseFloat(numero2.getText().toString());
