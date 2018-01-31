@@ -29,10 +29,14 @@ class MainActivity : AppCompatActivity() {
         val Resultado = findViewById<TextView>(R.id.resultado)
         val teclado = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
 
+        fun ocultar() {
+            teclado.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
+        }
 
         Sumar.setOnClickListener {
-            teclado.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
-            if (!numero1.text.toString().isEmpty() && !numero2.text.toString().isEmpty()) {
+
+            if (!numero1.text.isEmpty() && !numero2.text.isEmpty()) {
+                ocultar()
                 val aux1 = Float.parseFloat(numero1.text.toString())
                 val aux2 = Float.parseFloat(numero2.text.toString())
 
@@ -40,8 +44,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
         Resta.setOnClickListener {
-            teclado.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
-            if (!numero1.text.toString().isEmpty() && !numero2.text.toString().isEmpty()) {
+
+            if (!numero1.text.isEmpty() && !numero2.text.isEmpty()) {
+                ocultar()
                 val aux1 = Float.parseFloat(numero1.text.toString())
                 val aux2 = Float.parseFloat(numero2.text.toString())
 
@@ -49,8 +54,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
         Multiplicar.setOnClickListener {
-            teclado.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
-            if (!numero1.text.toString().isEmpty() && !numero2.text.toString().isEmpty()) {
+
+            if (!numero1.text.isEmpty() && !numero2.text.isEmpty()) {
+                ocultar()
                 val aux1 = Float.parseFloat(numero1.text.toString())
                 val aux2 = Float.parseFloat(numero2.text.toString())
 
@@ -58,8 +64,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
         Dividir.setOnClickListener {
-            teclado.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
-            if (!numero1.text.toString().isEmpty() && !numero2.text.toString().isEmpty()) {
+
+            if (!numero1.text.isEmpty() && !numero2.text.isEmpty()) {
+                ocultar()
                 val aux1 = Float.parseFloat(numero1.text.toString())
                 val aux2 = Float.parseFloat(numero2.text.toString())
 
@@ -71,7 +78,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-
     }
 }
 
